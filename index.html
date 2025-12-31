@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telegram Required</title>
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f2f2f2;
+}
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.7);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.popup{
+  background:#fff;
+  padding:25px;
+  width:90%;
+  max-width:340px;
+  border-radius:10px;
+  text-align:center;
+}
+.popup button{
+  padding:12px 18px;
+  border:none;
+  border-radius:30px;
+  font-size:15px;
+  margin:10px;
+  cursor:pointer;
+}
+.yes{ background:#32A0ED; color:#fff; }
+.no{ background:#ccc; }
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+  <div class="popup">
+    <h3>⚠️ Telegram Required</h3>
+    <p>Continue karne ke liye Telegram hona zaroori hai.</p>
+    <button class="yes" onclick="go()">YES, CONTINUE</button>
+    <button class="no" onclick="alert('Telegram required')">NO</button>
+  </div>
+</div>
+
+<script>
+function go(){
+  window.location.href = "landing.html";
+}
+</script>
+
+</body>
+</html>
