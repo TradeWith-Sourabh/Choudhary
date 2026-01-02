@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Telegram Required</title>
+<title>Access Confirmation | Trading Community</title>
 
 <style>
 *{
@@ -30,22 +30,23 @@ body{
 .popup{
   background:#ffffff;
   width:90%;
-  max-width:360px;
-  padding:25px 20px;
+  max-width:380px;
+  padding:25px 22px;
   border-radius:12px;
   text-align:center;
-  box-shadow:0 0 20px rgba(0,0,0,0.3);
+  box-shadow:0 0 25px rgba(0,0,0,0.35);
 }
 
 .popup h3{
   margin-top:0;
   font-size:20px;
+  color:#111;
 }
 
 .popup p{
   font-size:14px;
   color:#333;
-  line-height:1.5;
+  line-height:1.6;
   margin:12px 0;
 }
 
@@ -58,12 +59,16 @@ body{
   font-size:14px;
   font-weight:600;
   cursor:pointer;
-  margin-top:10px;
+  margin-top:12px;
 }
 
 .btn-yes{
-  background:#32A0ED;
+  background:#2f89e5;
   color:#fff;
+}
+
+.btn-yes:hover{
+  background:#246fc0;
 }
 
 .btn-no{
@@ -73,8 +78,9 @@ body{
 
 .note{
   font-size:12px;
-  color:#777;
-  margin-top:12px;
+  color:#666;
+  margin-top:14px;
+  line-height:1.5;
 }
 </style>
 </head>
@@ -84,29 +90,37 @@ body{
 <div class="overlay">
   <div class="popup">
 
-    <h3>⚠️ Telegram Required<br>
-      Trade With Sourabh Choudhary</h3>
+    <h3>
+      📊 Trading Community Access<br>
+      With Sourabh Choudhary
+    </h3>
 
     <p>
-      To continue, you must have Telegram.<br>
-      Please confirm before proceeding.
+      This platform is intended for individuals who have a genuine interest in
+      <strong>Stock Market and Cryptocurrency trading</strong>.
     </p>
 
     <p>
-      आगे बढ़ने के लिए आपके पास Telegram होना आवश्यक है।<br>
-      कृपया आगे बढ़ने से पहले पुष्टि करें।
+      We use Telegram to share market observations, educational content,
+      and trading-related discussions for learning and awareness purposes.
+    </p>
+
+    <p style="font-size:13px; color:#444; font-weight:600;">
+      Please continue only if you understand how financial markets work.
     </p>
 
     <button class="btn btn-yes" onclick="acceptTelegram()">
-      YES, I HAVE TELEGRAM
+      YES, I UNDERSTAND THE RISK & HAVE TELEGRAM
     </button>
 
     <button class="btn btn-no" onclick="denyTelegram()">
-      NO, I DON’T HAVE TELEGRAM
+      NO, I DO NOT WISH TO CONTINUE
     </button>
 
     <div class="note">
-      Telegram is mandatory to access this page.
+      ⚠️ Trading in stock market & cryptocurrency involves market risk.<br>
+      No guaranteed returns are promised. This is not financial advice.<br>
+      Participation is voluntary and at your own discretion.
     </div>
 
   </div>
@@ -114,12 +128,13 @@ body{
 
 <script>
 function acceptTelegram(){
-  // MAIN LANDING PAGE (PIXEL WILL FIRE THERE)
+  // MAIN LANDING PAGE
   window.location.href = "landing.html";
 }
 
 function denyTelegram(){
-  alert("Telegram is required to continue.\nटेलीग्राम आवश्यक है।");
+  // GO BACK TO PREVIOUS PAGE
+  window.history.back();
 }
 </script>
 
